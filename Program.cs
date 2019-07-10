@@ -7,17 +7,20 @@ namespace DeveloperTests
     {
         public static void Main(string[] args)
         {
-            var (one, two) = First.Solve("I have a transportation device which is a red bike which I love to ride.");
-            Console.WriteLine(string.Join("\r\n", one.Select(x => $"{x.Key}={x.Value}")));
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine(string.Join("\r\n", two.OrderBy(x=> x.Key).Select(x => $"{x.Key}={x.Value}")));
-            Console.WriteLine();
-            Console.WriteLine();
+            var (byWord, byLenght) = WordCounter.Do("I have a transportation device which is a red bike which I love to ride.");
 
-
+            Console.WriteLine("First task:");
+            Console.WriteLine("byWord:");
+            Console.WriteLine(string.Join("\r\n", byWord.Select(x => $"{x.Key}={x.Value}")));
+            Console.WriteLine();
+            Console.WriteLine("byLenght:");
+            Console.WriteLine(string.Join("\r\n", byLenght.Select(x => $"{x.Key}={x.Value}")));
+            Console.WriteLine();
+            Console.WriteLine();
+            
+            Console.WriteLine("Second task:");
             Console.WriteLine("Hello World!");
-            var r = Second.Foo("Hello World!");
+            var r = StringReverser.Do("Hello World!");
             Console.WriteLine(r);
         }
     }

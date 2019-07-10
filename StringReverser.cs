@@ -2,11 +2,11 @@
 
 namespace DeveloperTests
 {
-    public class Second
+    public class StringReverser
     {
-        public static string Foo(string argument)
+        public static string Do(string input)
         {
-            var charArray = argument.ToCharArray();
+            var charArray = input.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }
